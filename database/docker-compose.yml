@@ -1,0 +1,7 @@
+services:
+
+  recipes_db:
+    build:
+      dockerfile: ./Dockerfile
+    ports:
+      - 5432:5432

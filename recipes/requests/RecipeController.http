@@ -1,0 +1,74 @@
+### GET All recipes
+GET http://localhost:8080/api/recipes
+###
+
+### GET One recipe by id
+GET http://localhost:8080/api/recipes/1
+###
+
+### POST Create a new recipe
+POST http://localhost:8080/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Porotos Granados",
+  "description": "This porotos granados recipe is my version of a traditional vegan Chilean bean stew with pinto beans, green beans, sweet potatoes, corn, and oregano",
+  "ingredients": "1 medium onion - chopped, 2 cloves garlic - minced or pressed, 1 teaspoon smoked paprika, 2 tablespoons fresh oregano - chopped (2 teaspoons dried oregano), 3 medium sweet potatoes - peeled and diced into small cubes (1 ½ pounds), 3 cups pinto beans - 2 cans rinsed and drained, see notes for substitutions, 4 cups vegetable broth, 1 medium bay leaf, 8 ounces green beans - trimmed and snapped in half (about 2 cups), 2 cobs corn - kernels (about 1 ½ cups), salt and pepper to taste",
+  "instructions":  "1 Trim the corn kernels from the cobs. Set aside, 1 Heat a large pot or Dutch oven to medium heat, 1 Add the onions and cook for 2-3 minutes until the onions soften. Add a tablespoon of water if the onions start to stick, 1 Stir in the garlic, paprika, and 1 tablespoon of fresh oregano. Mix with the onions, 1 Add the beans, sweet potatoes, vegetable broth, and bay leaf. Adjust the heat so the ingredients are simmering. Stir the bottom of the pot to remove any ingredients, 1 Cover the pot and simmer for 15 minutes. If the stew is too thin, mash a few of the sweet potato cubes against the side of the pot, 1 Add the green beans and corn, cover, and cook for an additional 5 - 10 minutes until the corn and beans are tender, 1 Turn off the heat and stir in the remaining oregano. Add salt and pepper to taste",
+  "tags":  "Vegan, Chile, Verano, Beans"
+}
+
+###
+
+### POST Create a new recipe
+POST http://localhost:8080/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Pastel de Choclo",
+  "description": "The taste is sweet and sometimes reminds me very remotely of chocolate. This is particularly due to the choclo, or sweet corn. Choclo is corn in Mapudungun the language of the indigenous Mapuche people. Today, pastel de choclo is eaten even in neighboring Peru, Bolivia and Argentina.",
+  "ingredients": "1 large onion, 3 garlic cloves, 275 g vegan minced meat, 800 g sweet corn organic, 20 g basil organic, 1 tsp ground cumin, 1 tsp salt, 100 ml soy milk or oat milk, 1 tbsp cornstarch, Sunflower Oil",
+  "instructions":  "Preheat the oven to 180 degrees, Chop the onions and mince the garlic and set aside., Take the corn and rinse it briefly in a sieve. You can then dry the corn kernels slightly in a clean tea towel. Then add 6 or 8 basicilum leaves and use the hand blender to make your pastel de choclo. It doesn’t have to be completely smooth. There may well be pieces in it. Nice right! Set this aside again., Heat a little sunflower oil in a pan and once it is slightly hot, add the onion and garlic. Fry it until the onion is glazy and now add the vegan mince as well. Make sure it mixes nicely with the onions and garlic. After a few minutes, add the cumin and salt. Fry until cooked through and set aside again., Now warm the corn on low heat. Add 2 more sprigs (i.e. a bunch that has several basicilum leaves on it) and cook with them. After 5 minutes, add the soy milk (if it is very thick, you may add 50ml more) and then the cornstarch. I always strain these first or you will get ugly lumps. Let it heat until it boils., Grease the baking dish well and pack the pan with the minced meat and onion mixture. Spread it over the baking dish. Next, pour the corn on top. Divide well., Put the dish in the oven and leave in for 20 to 30 minutes. You want the top to get a little crispy, so make sure you also use the grill at the end when it doesn’t get crispy., After 30 minutes in the oven, cool briefly and voila, tu pastel de choclo!, Delicious with a fresh salad.",
+  "tags":  "Vegan, Chile, Verano, Corn"
+}
+
+###
+
+### DELETE One recipe by id
+DELETE http://localhost:8080/api/recipes/1
+###
+
+### UPDATE Create a new recipe
+PUT http://localhost:8080/api/recipes/1
+Content-Type: application/json
+
+{
+  "name": "Porotos Granados Veganos",
+  "description": "This porotos granados recipe is my version of a traditional vegan Chilean bean stew with pinto beans, green beans, sweet potatoes, corn, and oregano",
+  "ingredients": "1 medium onion - chopped, 2 cloves garlic - minced or pressed, 1 teaspoon smoked paprika, 2 tablespoons fresh oregano - chopped (2 teaspoons dried oregano), 3 medium sweet potatoes - peeled and diced into small cubes (1 ½ pounds), 3 cups pinto beans - 2 cans rinsed and drained, see notes for substitutions, 4 cups vegetable broth, 1 medium bay leaf, 8 ounces green beans - trimmed and snapped in half (about 2 cups), 2 cobs corn - kernels (about 1 ½ cups), salt and pepper to taste",
+  "instructions":  "1 Trim the corn kernels from the cobs. Set aside, 1 Heat a large pot or Dutch oven to medium heat, 1 Add the onions and cook for 2-3 minutes until the onions soften. Add a tablespoon of water if the onions start to stick, 1 Stir in the garlic, paprika, and 1 tablespoon of fresh oregano. Mix with the onions, 1 Add the beans, sweet potatoes, vegetable broth, and bay leaf. Adjust the heat so the ingredients are simmering. Stir the bottom of the pot to remove any ingredients, 1 Cover the pot and simmer for 15 minutes. If the stew is too thin, mash a few of the sweet potato cubes against the side of the pot, 1 Add the green beans and corn, cover, and cook for an additional 5 - 10 minutes until the corn and beans are tender, 1 Turn off the heat and stir in the remaining oregano. Add salt and pepper to taste",
+  "tags":  "Vegan, Chile"
+}
+
+###
+
+
+### GET Search recipe by Name
+GET http://localhost:8080/api/recipes/searchByName?name=Porotos Granados
+###
+
+### GET Search recipe by Description
+GET http://localhost:8080/api/recipes/searchByDescription?description=bean stew
+###
+
+### GET Search recipe by Description
+GET http://localhost:8080/api/recipes/searchByIngredients?ingredients=Onion
+###
+
+### GET Search recipe by Description
+GET http://localhost:8080/api/recipes/searchByTag?tag=Corn
+###
+
+### GET Search recipe by Anything
+GET http://localhost:8080/api/recipes/searchByAnything?any=Choclo
+###
