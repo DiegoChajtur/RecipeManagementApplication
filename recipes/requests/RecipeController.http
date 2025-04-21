@@ -70,5 +70,5 @@ GET http://localhost:8080/api/recipes/searchByTag?tag=Corn
 ###
 
 ### GET Search recipe by Anything
-GET http://localhost:8080/api/recipes/searchByAnything?any=Choclo
+GET http://localhost:8080/api/recipes/searchByAnything?text=Choclo
 ###
