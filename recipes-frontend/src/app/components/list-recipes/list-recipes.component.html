@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Recipes</h1>
+  <div>
+    <input id="searchBox"  type="text" />
+    <button (click)="search()">Search</button>
+  </div>
+</div>
+
+
+
+
+@if (recipes$ | async; as recipes) {
+@for (recipe of recipes; track recipe.id) {
+<h3>{{ recipe.name }}</h3>
+<p><strong>Description:</strong> {{ recipe.description }}</p>
+<p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+<p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
+<p><strong>Tags:</strong> {{ recipe.tags }}</p>
+<div class="divider" role="separator" aria-label="Divider"></div>
+
+} @empty {
+<li>There are no recipes.</li>
+}
+
+}
